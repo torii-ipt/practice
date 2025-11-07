@@ -1,6 +1,6 @@
 $(function () {
     $('.btn-trigger').on('click', function () {
-        $('body, .headerlogo, .btn-trigger, #gnav').toggleClass('active');
+        $('.headerlogo, .btn-trigger, #gnav').toggleClass('active');
         if ($('.headerlogo').hasClass('active')) {
         $('.headerlogo a img').attr('src', 'assets/img/logo-w.svg'); 
     } else {
