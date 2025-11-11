@@ -4,13 +4,18 @@
 :root {
     --h2mg-btm: clamp(20px, 7.1vw, 100px);
     --category-mg-btm: clamp(20px, 8.6vw, 120px);
-    --SP-pg: 0 16px;
+    --SPcategory-mg-btm: 5.3333vw;
+    --SP-pg: 0 3.72vw;
     --h2-f-s: clamp(30px, 2.5vw, 36px);
 }
 
 * {
     box-sizing: border-box;
 }
+
+/* html {
+	scroll-behavior: smooth;
+} */
 
 body {
     font-family: "YuGothic", "游ゴシック", "游ゴシック体", sans-serif;
@@ -78,6 +83,12 @@ h2::after {
     width: 3em;
     height: 2px;
     border: #333 1px solid;
+}
+
+@media screen and (max-width:768px) {
+    h2{
+        font-size: 6.4vw;
+    }
 }
 
 a:hover {
@@ -161,11 +172,11 @@ header #gnav .button01::before {
     /* ハンバーガーメニュー */
     .btn-trigger {
         position: relative;
-        width: clamp(60px,16vw,80px);
-        height: clamp(60px,16vw,80px);
+        width: 12.492vw;
+        height:  12.492vw;
         cursor: pointer;
         background-color: #ff2a2a;
-        padding: clamp(10px, 3vw, 20px);
+        padding: 3.12vw;
         position: fixed;
         right: 0;
         z-index: 1000;
@@ -174,7 +185,7 @@ header #gnav .button01::before {
     .btn-trigger span {
         position: absolute;
         inset: auto;
-        width: 40px;
+        width: 6.246vw;
         height: 2px;
         background-color: #fff;
         border-radius: 4px;
@@ -199,8 +210,8 @@ header #gnav .button01::before {
     }
 
     .hamburger.active span:nth-of-type(1) {
-        -webkit-transform: translateY(clamp(10.2px,2.7vw,14px)) rotate(-45deg);
-        transform: translateY(clamp(10.2px,2.7vw,14px)) rotate(-45deg);
+        -webkit-transform: translateY(2.1864vw) rotate(-45deg);
+        transform: translateY(2.1864vw) rotate(-45deg);
     }
 
     .hamburger.active span:nth-of-type(2) {
@@ -208,8 +219,8 @@ header #gnav .button01::before {
     }
 
     .hamburger.active span:nth-of-type(3) {
-        -webkit-transform: translateY(clamp(-10.2px,-2.7vw,-13px)) rotate(45deg);
-        transform: translateY(clamp(-10.2px,-2.7vw,-13px)) rotate(45deg);
+        -webkit-transform: translateY(-2.124vw) rotate(45deg);
+        transform: translateY(-2.124vw) rotate(45deg);
     }
 
     #gnav{
@@ -372,35 +383,48 @@ main .mv .mvtext .button01::after {
 
 @media screen and (max-width:768px) {
     main .mv {
-        height: 600px;
+        height: 120vw;
+    }
+    main .mv .mv-box li {
+        aspect-ratio: 3 / 2;
     }
 
     main .mv .mv-box img {
-        width: 100%;
-        height: 400px;
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+        
         /* margin-left: auto; */
         object-position: right;
-    }
-    main .mv .mv-box li:last-child img{
-        object-position: center;
     }
 
     main .mv .mv-box li::after {
         inset: 0;
         width: 100%;
-        height: 400px;
+        max-height: 100%;
     }
 
     main .mv .mvtext {
-        top: 420px;
+        top: 70vw;
         left: 0;
         width: 100%;
         padding: var(--SP-pg);
         /* position: static; */
-
     }
+
+    main .mv .mvtext p {
+        font-size: 6.4vw;
+    }
+
     main .mv .mvtext .button01{
         margin-top: 15px;
+        font-size: 5.8vw;
+        height: 14.65vw;
+    }
+
+    main .mv .mvtext .button01::after {
+        width: 4.18vw;
+        height: 4.18vw;
     }
 }
 
@@ -498,19 +522,44 @@ main .mv .mvtext .button01::after {
 }
 
 @media screen and (max-width:768px) {
+    #reason {
+    margin-bottom: var(--SPcategory-mg-btm);
+}
+
+    #reason .reason-inner{
+        padding: 5.3333vw 0;
+        height: 100%;
+    }
     #reason .reason-inner .reason-innerbox {
         width: 95vw;
+        height: 26.6666vw;
         display: flex;
         flex-direction: row;
     }
+
+    #reason .reason-inner .reason-innerbox[class*="reverse"]{
+        margin-top: 5.3333vw;
+    }
+
     #reason .reason-inner .reason-innerbox:first-child::before{
         margin-right: 10px;
         position: static;
+        width:16vw;
+        height: calc(16vw * (120 / 174));
     }
     #reason .reason-inner .reason-innerbox:last-child::before{
         margin-right: 10px;
         position: static;
-        
+        width:11.52vw;
+        height: calc(11.52vw * (120 / 101));
+    }
+
+    #reason .reason-inner .reason-innerbox .textbox{
+        font-size: 3.2vw;
+    }
+
+    #reason .reason-inner .reason-innerbox .red{
+        font-size: 5.6vw;
     }
 }
 
@@ -586,14 +635,29 @@ main .mv .mvtext .button01::after {
 
 
 @media screen and (max-width:768px) {
+    #interview {
+    margin-bottom: var(--SPcategory-mg-btm);
+}
+
     #interview .comment {
         flex-direction: column-reverse;
         align-items: center;
+        margin-bottom:2.6666vw;
+    }
+
+    #interview .comment .person{
+        font-size: 2.4vw;
+    }
+
+    #interview .comment .person img {
+        width: 18.6666vw;
+        height: 18.6666vw;
     }
 
     #interview .comment .person+p {
         width: 100%;
         margin-bottom: 30px;
+        font-size: 3.2vw;
     }
 
     #interview .comment>p::before {
@@ -607,7 +671,7 @@ main .mv .mvtext .button01::after {
         width: 20px;
         height: 20px;
         clip-path: polygon(0 0, 100% 0, 50% 100%);
-        inset: auto 48% -19px auto;
+        inset: auto auto -19px 47.3333%;
         background-color: #e9f1fb;
 
     }
@@ -660,13 +724,30 @@ main .mv .mvtext .button01::after {
 }
 
 @media screen and (max-width:768px) {
+    #about{
+        margin-bottom: var(--SPcategory-mg-btm);
+        padding: 5.3333vw 0;
+    }
+
     #about .about-list {
         flex-direction: column;
         width: 100%;
+        gap: 5.3333vw;
     }
 
     #about .about-list .about-card {
         width: 100%;
+        padding: 12vw;
+    }
+    #about .about-list .about-card h3{
+        font-size: 5.6vw;
+    }
+    #about .about-list .about-card .en-ttl{
+        font-size: 3.7vw;
+        margin-bottom: 3.9vw;
+    }
+    #about .about-list .about-card p:last-of-type{
+        font-size: 3.7vw;
     }
 }
 
@@ -687,7 +768,6 @@ main .mv .mvtext .button01::after {
 
 #apply p {
     font-size: clamp(16px, 1.4vw, 20px);
-    ;
 }
 
 #apply .button01 {
@@ -707,6 +787,20 @@ main .mv .mvtext .button01::after {
     opacity: 1;
 }
 
+@media screen and (max-width:768px) {
+    #apply {
+    margin-bottom: var(--SPcategory-mg-btm);
+    }
+
+    #apply p {
+    font-size: 4.1vw;
+    }
+
+    #apply .button01{
+        font-size: 5.58vw;
+        margin-top: 5.3333vw;
+    }
+}
 
 /* フッター */
 
@@ -739,16 +833,31 @@ footer small {
 
 
 @media screen and (max-width:768px) {
+    footer {
+    padding-top: 5.3333vw;
+    padding-bottom: 2.6666vw;
+}
+
     footer .footer-list {
         width: 100%;
         flex-wrap: wrap;
-        
-
     }
 
-    footer .footer-list>li {
+    footer .footer-list > li {
         width: 50%;
         margin-bottom: 20px;
         padding-left: 16px;
     }
+
+    footer .footer-list p{
+        font-size: 4.2666vw;
+    }
+
+    footer .footer-list .footer-list-items{
+        font-size: 3.7333vw;
+    }
+    footer small {
+    font-size: 3.2vw;
+}
+
 }
