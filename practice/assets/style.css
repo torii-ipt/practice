@@ -172,11 +172,11 @@ header #gnav .button01::before {
     /* ハンバーガーメニュー */
     .btn-trigger {
         position: relative;
-        width: 10.41vw;
-        height:  10.41vw;
+        width: 12.492vw;
+        height:  12.492vw;
         cursor: pointer;
         background-color: #ff2a2a;
-        padding: 2.6vw;
+        padding: 3.12vw;
         position: fixed;
         right: 0;
         z-index: 1000;
@@ -185,7 +185,7 @@ header #gnav .button01::before {
     .btn-trigger span {
         position: absolute;
         inset: auto;
-        width: 5.205vw;
+        width: 6.246vw;
         height: 2px;
         background-color: #fff;
         border-radius: 4px;
@@ -210,8 +210,8 @@ header #gnav .button01::before {
     }
 
     .hamburger.active span:nth-of-type(1) {
-        -webkit-transform: translateY(1.822vw) rotate(-45deg);
-        transform: translateY(1.822vw) rotate(-45deg);
+        -webkit-transform: translateY(2.1864vw) rotate(-45deg);
+        transform: translateY(2.1864vw) rotate(-45deg);
     }
 
     .hamburger.active span:nth-of-type(2) {
@@ -219,8 +219,8 @@ header #gnav .button01::before {
     }
 
     .hamburger.active span:nth-of-type(3) {
-        -webkit-transform: translateY(-1.77vw) rotate(45deg);
-        transform: translateY(-1.77vw) rotate(45deg);
+        -webkit-transform: translateY(-2.124vw) rotate(45deg);
+        transform: translateY(-2.124vw) rotate(45deg);
     }
 
     #gnav{
@@ -855,7 +855,6 @@ footer small {
 
     footer .footer-list .footer-list-items{
         font-size: 3.7333vw;
-        line-height: 1.8;
     }
     footer small {
     font-size: 3.2vw;
