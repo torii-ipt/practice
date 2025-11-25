@@ -1,4 +1,11 @@
 
+//ニュースバルーンアニメーション
+$('#news').one('inview', function(event, isInView) {
+if (isInView) {
+    $(this).addClass('balloon-active');// element is now visible in the viewport
+} 
+});
+
 //選ばれる理由　左右スライド
 $('.slide-right').one('inview', function(event, isInView) {
 if (isInView) {
