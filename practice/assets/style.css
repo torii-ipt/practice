@@ -265,7 +265,7 @@ header #gnav .button01::before {
 /* MV */
 main .mv {
     position: relative;
-    margin-bottom: var(--category-mg-btm);
+    /* margin-bottom: var(--category-mg-btm); */
     height: 100vh;
 }
 
@@ -425,6 +425,107 @@ main .mv .mvtext .button01::after {
     main .mv .mvtext .button01::after {
         width: 4.18vw;
         height: 4.18vw;
+    }
+}
+
+
+/* ニュース */
+
+#news {
+    margin-bottom: var(--category-mg-btm);
+    opacity: 0;
+}
+#news h2{
+    margin-bottom: 60px;
+}
+#news .news-list .news-list-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#news .news-list .news-list-items .flex{   
+    width: 100%;
+    padding: 10px 20px ;
+    font-size: 1rem;
+    align-items: center;
+}
+
+#news .news-list .news-list-items .flex .news-category{
+    font-weight: bold;
+    margin: 0 20px;
+    padding:  0 4px;
+    color: #FFF;
+    background-color: #ff2a2a;
+}
+
+#news .news-btn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#news .news-btn .button02{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: #fff;
+    background-color: #ff2a2a;
+    box-shadow: 1px 1px 1px 0px #3b3b3b;
+    border-radius: 10px;
+    width: min(11vw,180px);
+    height: 40px;
+    font-size: clamp(16px, 1.42vw, 20px);
+    margin: 20px;
+    transition: 0.3s;
+}
+#news .news-btn .button02:hover {
+    scale: 1.05;
+    opacity: 1;
+}
+
+#news.balloon-active {
+    animation: balloon2 1s forwards;
+}
+
+@keyframes balloon2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .news-wrap{
+    background-color: #ffffff;
+    padding: 0.3vw 0;
+    margin-bottom: 1vw;
+}
+
+    #news {
+    margin-bottom: var(--SPcategory-mg-btm);
+    }
+
+    #news h2{
+    margin-bottom: var(--h2mg-btm);
+}
+    #news .news-list .news-list-items .flex{
+        flex-wrap: wrap;
+        padding: 2vw 0;
+        font-size: 4.26666vw;
+    }
+    #news .news-list .news-list-items .flex .news-title{
+        margin-top: 1.5vw;
+        width: 100%;
+        text-align: left;
+    }
+    #news .news-btn .button02{
+        font-size: 4.2666vw;
+        width: 30vw;
+        height: 10.6vw;
+        margin: 2vw 0 0 0 ;
     }
 }
 
